@@ -49,7 +49,6 @@ public class Graph<T> {
   }
 
   public void addEdge(int src, int dest) {
-    // Ensure enough rows
     while (matrix.size() <= src) {
       matrix.add(new ArrayList<>());
     }

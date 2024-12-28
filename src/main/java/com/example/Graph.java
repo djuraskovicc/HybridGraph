@@ -21,18 +21,16 @@ public class Graph<T> {
   }
 
   public void addEdge(int src, int dest) {
-    // Ensure enough rows
     while (matrix.size() <= src) {
       matrix.add(new ArrayList<>());
     }
 
-    // Ensure enough columns in the specified row
     List<Integer> targetRow = matrix.get(src);
     while (targetRow.size() <= dest) {
-      targetRow.add(0); // Add placeholder values (e.g., 0 for no edge)
+      targetRow.add(0);
     }
 
-    targetRow.set(dest, 1); // 1 represents an edge from src to dest   matrix.set(src, dest);
+    targetRow.set(dest, 1);
   }
 
   public boolean checkEdge(int src, int dest) {
