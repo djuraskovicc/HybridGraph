@@ -3,7 +3,7 @@ This project introduces a hybrid approach combining adjecency matrix and adjecen
 
 ## Introduction
 
-This project introduces a novel approach to representing graphs that combines the memory efficiency of adjacency lists with the conceptual simplicity and direct access benefits of adjacency matrices.
+This project introduces approach to representing graphs that combines the memory efficiency of adjacency lists with the conceptual simplicity and direct access benefits of adjacency matrices.
 This hybrid structure is particularly suitable for dynamic graphs where the number of nodes and edges can change over time.
 
 ## Key Features
