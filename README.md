@@ -3,7 +3,7 @@ This project introduces a hybrid approach combining adjecency matrix and adjecen
 
 ## Introduction
 
-This project introduces a novel approach to representing graphs that combines the memory efficiency of adjacency lists with the conceptual simplicity and direct access benefits of adjacency matrices. 
+This project introduces a novel approach to representing graphs that combines the memory efficiency of adjacency lists with the conceptual simplicity and direct access benefits of adjacency matrices.
 This hybrid structure is particularly suitable for dynamic graphs where the number of nodes and edges can change over time.
 
 ## Key Features
@@ -13,15 +13,11 @@ This hybrid structure is particularly suitable for dynamic graphs where the numb
 - Rows and columns are dynamically resized as needed, allowing the graph to grow without predefining its size.
 - Unlike a traditional adjacency matrix, memory is only allocated for existing edges, mimicking the efficiency of adjacency lists.
 
-2. **Equal Row Lengths**:
-
-- All rows maintain equal lengths, preserving the clean structure of an adjacency matrix while supporting dynamic changes.
-
-3. **Efficient Access**:
+2. **Efficient Access**:
 
 - Provides O(1) access for edge queries (e.g., checking if an edge exists between two nodes).
 
-4. **Memory Efficiency**:
+3. **Memory Efficiency**:
 
 - Avoids the O(V^2) memory overhead of a traditional adjacency matrix by allocating space only as required.
 
@@ -30,7 +26,7 @@ This hybrid structure is particularly suitable for dynamic graphs where the numb
 ### Core Data Structure
 
 The graph is represented as a list of lists, where each inner list corresponds to a row in the adjacency matrix. 
-Rows are dynamically resized to ensure all rows have the same number of columns.
+Rows are dynamically resized and have they lenght to the last node that is connected to. Mimicking adjacency list.
 
 ### Example Code
 ```
