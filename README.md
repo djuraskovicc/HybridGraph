@@ -8,31 +8,32 @@ This hybrid structure is particularly suitable for dynamic graphs where the numb
 
 ## Key Features
 
-1. Dynamic Resizing:
+1. **Dynamic Resizing**:
 
 - Rows and columns are dynamically resized as needed, allowing the graph to grow without predefining its size.
 - Unlike a traditional adjacency matrix, memory is only allocated for existing edges, mimicking the efficiency of adjacency lists.
 
-2. Equal Row Lengths:
+2. **Equal Row Lengths**:
 
 - All rows maintain equal lengths, preserving the clean structure of an adjacency matrix while supporting dynamic changes.
 
-3. Efficient Access:
+3. **Efficient Access**:
 
 - Provides O(1) access for edge queries (e.g., checking if an edge exists between two nodes).
 
-4. Memory Efficiency:
+4. **Memory Efficiency**:
 
 - Avoids the O(V^2) memory overhead of a traditional adjacency matrix by allocating space only as required.
 
 ## Implementation Details
 
-Core Data Structure
+### Core Data Structure
 
 The graph is represented as a list of lists, where each inner list corresponds to a row in the adjacency matrix. 
 Rows are dynamically resized to ensure all rows have the same number of columns.
 
-# Example Code
+### Example Code
+```
 public class Graph<T> {
   private List<List<Integer>> matrix;
   private List<Node<T>> nodes;
@@ -69,8 +70,10 @@ public class Graph<T> {
     return false;
   }
 }
+```
 
-# Example Usage
+### Example Usage
+```
 Graph<Character> graph = new Graph<>();
 graph.addNode(new Node<Character>('A'));
 graph.addNode(new Node<Character>('B'));
@@ -81,27 +84,30 @@ graph.addEdge(1, 2);
 graph.addEdge(2, 0);
 
 graph.print();
+```
 
-## Example Output
+### Example Output
 
 For the graph above, the output will be:
 
+```
   A B C 
 A 0 1  
 B 0 0 1 
 C 1   
+```
 
 ## Applications
 
-1. Dynamic Graphs:
+1. **Dynamic Graphs**:
 
 - Ideal for scenarios where the graph size changes frequently.
 
-2. Sparse Graphs:
+2. **Sparse Graphs**:
 
 - Efficient memory usage for graphs with fewer edges.
 
-3. Dense Graphs:
+3. **Dense Graphs**:
 
 - Maintains the fast access times of adjacency matrices while minimizing memory overhead.
 
@@ -112,11 +118,11 @@ Slightly more complex implementation compared to traditional representations.
 
 ## Next Steps
 
-1. Performance Benchmarking:
+1. **Performance Benchmarking**:
 
 - Compare this approach with traditional adjacency matrices and lists for different graph densities.
 
-2. Expand Features:
+2. **Expand Features**:
 
 - Add support for weighted edges.
   Implement methods for removing nodes and edges.
